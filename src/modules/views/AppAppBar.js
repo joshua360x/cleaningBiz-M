@@ -6,11 +6,13 @@ import AppBar from "../components/AppBar";
 import Toolbar, { styles as toolbarStyles } from "../components/Toolbar";
 import { Link } from "react-router-dom";
 import { Typography } from "@material-ui/core";
+import './AppAppBar.css'
 
 const styles = (theme) => ({
   title: {
-    fontSize: 24,
-    color: theme.palette.common.white,
+    fontSize: 22,
+    color: theme.palette.common.black,
+    textDecoration: 'none'
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -29,7 +31,7 @@ const styles = (theme) => ({
   },
   rightLink: {
     fontSize: 16,
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     marginLeft: theme.spacing(3),
   },
   linkSecondary: {
@@ -42,17 +44,17 @@ function AppAppBar(props) {
 
   return (
     <div>
-      <AppBar position="fixed">
-        <Toolbar className={classes.toolbar}>
+      <AppBar className='newBar' position="fixed">
+        <Toolbar className={`${classes.toolbar} newBar`}>
           <div className={classes.left} />
           <Link to={"/"}>
             <Typography
               variant="h6"
               underline="none"
               color="inherit"
-              className={classes.title}
+              className={`${classes.title} newTitle`}
             >
-              {"onepirate"}
+              {"Without Spot OR Blemish"}
             </Typography>
           </Link>
           <div className={classes.right}>
@@ -61,7 +63,7 @@ function AppAppBar(props) {
                 color="inherit"
                 variant="h6"
                 underline="none"
-                className={classes.rightLink}
+                className={`${classes.rightLink}`}
               >
                 {"Sign In"}
               </Typography>

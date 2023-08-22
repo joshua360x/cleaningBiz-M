@@ -7,7 +7,7 @@ import {
   Checkbox,
   FormHelperText,
   TextField,
-  makeStyles,
+  // makeStyles,
 } from "@material-ui/core";
 import Typography from './modules/components/Typography';
 import AppFooter from './modules/views/AppFooter';
@@ -17,27 +17,31 @@ import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik } from "formik";
 
-const useStyles = makeStyles((theme) => ({
-  form: {
-    marginTop: theme.spacing(6),
-  },
-  button: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(2),
-  },
-  feedback: {
-    marginTop: theme.spacing(2),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   form: {
+//     marginTop: theme.spacing(6),
+//   },
+//   button: {
+//     marginTop: theme.spacing(3),
+//     marginBottom: theme.spacing(2),
+//   },
+//   feedback: {
+//     marginTop: theme.spacing(2),
+//   },
+// }));
 
 function SignUp() {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false);
   const [newUser, setNewUser] = useState(null);
 
   return (
     <React.Fragment>
-      <AppAppBar />
+     
+     if ({isLoading}) {
+       <AppAppBar />
+      
+     }
       <AppForm>
         <React.Fragment>
           <Typography variant="h3" gutterBottom marked="center" align="center">
