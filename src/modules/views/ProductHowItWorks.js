@@ -6,6 +6,7 @@ import Container from '@material-ui/core/Container';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import { Link } from "react-router-dom";
+import './ProductHowItWorks.css'
 
 const styles = (theme) => ({
   root: {
@@ -72,12 +73,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
-                  src="/productHowItWorks1.svg"
+                  src="/calendar.svg"
                   alt="suitcase"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                  Pick a date and time convenient for you.
                 </Typography>
               </div>
             </Grid>
@@ -85,12 +86,12 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
                 <img
-                  src="/productHowItWorks2.svg"
+                  src="/mail.svg"
                   alt="graph"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so be quick.
+                  Check your email for confirmation and assigned cleaner
                 </Typography>
               </div>
             </Grid>
@@ -103,8 +104,8 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'A cleaner should arrive within alloted time. '}
+                  {''}
                 </Typography>
               </div>
             </Grid>
@@ -121,6 +122,22 @@ function ProductHowItWorks(props) {
           Get started
         </Button>
         </Link>
+
+        <Grid className='gridLast' item xs={12} md={4}>
+              <div className={classes.item}>
+                <div className={classes.number}></div>
+                <img
+                  src="/phone.svg"
+                  alt="clock"
+                  className={classes.image}
+                />
+                <Typography variant="h5" align="center">
+                  {`Have More Questions, schedule a `}
+                  {''}
+                   <a href='#'>free consultation call.</a>
+                </Typography>
+              </div>
+            </Grid>
       </Container>
     </section>
   );

@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import { Link } from "react-router-dom";
+import { MenuItem } from 'material-ui';
+import { Box, FormControl, InputLabel, NativeSelect, Select } from '@material-ui/core';
 
 function Copyright() {
   return (
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        {/* Without Spot OR Blemish */}
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -21,12 +23,27 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    // flexWrap: 'wrap',
+    justifyContent:"flex-end",
+
+
+    width: '100%',
     backgroundColor: theme.palette.secondary.light,
   },
   container: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-    display: 'flex',
+    marginTop: theme.spacing(7),
+    marginBottom: theme.spacing(7),
+    display: '',
+    flexWrap: '',
+    width: '',
+    justifyContent:"flex-end",
+
+  },
+  newClasses: {
+    width: '100%',
+    backgroundColor: theme.palette.secondary.light,
+    marginTop: '1%',
+    padding: '3%',
   },
   iconsWrapper: {
     height: 120,
@@ -72,88 +89,47 @@ const LANGUAGES = [
   },
 ];
 
+
+
 export default function AppFooter() {
   const classes = useStyles();
+  const [language, setLanguage] = useState('english')
+
+    function handleChange(e) {
+      e.preventDefault()
+      setLanguage(e.target.value);
+    
+    }
 
   return (
-    <Typography component="footer" className={classes.root}>
-      <Container className={classes.container}>
-        <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
-            <Grid
-              container
-              direction="column"
-              justify="flex-end"
-              className={classes.iconsWrapper}
-              spacing={2}
-            >
-              <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
-                  <img src="/appFooterFacebook.png" alt="Facebook" />
-                </a>
-                <a href="https://twitter.com/MaterialUI" className={classes.icon}>
-                  <img src="/appFooterTwitter.png" alt="Twitter" />
-                </a>
-              </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
+ 
+
+        <Box className={classes.newClasses}
+      sx={{
+        width: "100%",
+        height: "auto",
+        backgroundColor: "secondary.main",
+        paddingTop: "1rem",
+        paddingBottom: "1rem",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container direction="column" alignItems="center">
+          <Grid item xs={12}>
+            <Typography color="black" variant="h5">
+              Without Spot Or Blemish
             </Typography>
-            <ul className={classes.list}>
-              <li className={classes.listItem}>
-                <Link to={"/terms"}>Terms</Link>
-              </li>
-              <li className={classes.listItem}>
-                <Link to={"/privacy"}>Privacy</Link>
-              </li>
-            </ul>
           </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              SelectProps={{
-                native: true,
-              }}
-              className={classes.language}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="sponsored" title="Freepik">
-                Freepik
-              </Link>
-              {' from '}
-              <Link href="https://www.flaticon.com" rel="sponsored" title="Flaticon">
-                www.flaticon.com
-              </Link>
-              {' is licensed by '}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
+          <Grid item xs={12}>
+            <Typography color="textSecondary" variant="subtitle1">
+              {`${new Date().getFullYear()} | Legal | Terms | Privacy`}
             </Typography>
           </Grid>
         </Grid>
       </Container>
-    </Typography>
+    </Box>
+
+    //   </Container>
+    // </Typography>
   );
 }

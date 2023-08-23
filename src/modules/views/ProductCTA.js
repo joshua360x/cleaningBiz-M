@@ -55,6 +55,8 @@ const styles = (theme) => ({
     bottom: 0,
     width: '100%',
     maxWidth: 600,
+    maxHeight: 550,
+    objecFit: 'cover'
   },
 });
 
@@ -78,14 +80,14 @@ function ProductCTA(props) {
           <div className={classes.card}>
             <form onSubmit={handleSubmit} className={classes.cardContent}>
               <Typography variant="h2" component="h2" gutterBottom>
-                Receive offers
+                Follow Our Blog
               </Typography>
               <Typography variant="h5">
-                Taste the holidays of the everyday close to home.
+                Come and follow us on our journey.
               </Typography>
               <TextField noBorder className={classes.textField} placeholder="Your email" />
               <Button type="submit" color="primary" variant="contained" className={classes.button}>
-                Keep me updated
+                Keep Me In the Loop!
               </Button>
             </form>
           </div>
@@ -94,7 +96,8 @@ function ProductCTA(props) {
           <Hidden smDown>
             <div className={classes.imageDots} />
             <img
-              src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
+            src='/simple2.jpg'
+              // src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
               alt="call to action"
               className={classes.image}
             />

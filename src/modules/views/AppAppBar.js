@@ -10,7 +10,7 @@ import './AppAppBar.css'
 
 const styles = (theme) => ({
   title: {
-    fontSize: 22,
+    fontSize: 19,
     color: theme.palette.common.black,
     textDecoration: 'none'
   },
@@ -19,7 +19,10 @@ const styles = (theme) => ({
     justifyContent: "space-between",
   },
   left: {
-    flex: 1,
+    flex: 0,
+    // width: '100%',
+    height: '50%',
+    position: 'relative',
   },
   leftLinkActive: {
     color: theme.palette.common.white,
@@ -49,13 +52,14 @@ function AppAppBar(props) {
           <div className={classes.left} />
           <Link to={"/"}>
             <Typography
-              variant="h6"
+              variant="h8"
               underline="none"
               color="inherit"
               className={`${classes.title} newTitle`}
             >
-              {"Without Spot OR Blemish"}
+             Without Spot OR Blemish
             </Typography>
+            {/* <img className="newImg" src="/new-logo.png" alt="" /> */}
           </Link>
           <div className={classes.right}>
             <Link to={"/signin"}>
