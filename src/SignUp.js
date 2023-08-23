@@ -16,6 +16,7 @@ import AppForm from './modules/views/AppForm';
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { Formik } from "formik";
+import NewAppBar from './modules/views/NewAppBar';
 
 // const useStyles = makeStyles((theme) => ({
 //   form: {
@@ -39,8 +40,8 @@ function SignUp() {
     <React.Fragment>
      
      if ({isLoading}) {
-       <AppAppBar />
-      
+      //  <AppAppBar />
+      <NewAppBar />
      }
       <AppForm>
         <React.Fragment>

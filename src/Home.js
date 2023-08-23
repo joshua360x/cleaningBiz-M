@@ -4,6 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import ProductCategories from "./modules/views/ProductCategories";
 import ProductSmokingHero from "./modules/views/ProductSmokingHero";
+import NewAppBar from './modules/views/NewAppBar'
 import AppFooter from "./modules/views/AppFooter";
 import AppFooterBottom from "./modules/views/AppFooterBottom"
 import ProductHero from "./modules/views/ProductHero";
@@ -43,7 +44,8 @@ function App() {
 function Index() {
   return (
     <React.Fragment>
-      <AppAppBar />
+      {/* <AppAppBar /> */}
+      <NewAppBar />
       <ProductHero />
       <ProductValues  />
       {/* <ProductCategories /> */}

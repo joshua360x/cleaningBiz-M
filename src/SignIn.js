@@ -14,6 +14,7 @@ import AppAppBar from './modules/views/AppAppBar';
 import AppForm from './modules/views/AppForm';
 import * as Yup from "yup";
 import { Formik } from "formik";
+import NewAppBar from './modules/views/NewAppBar';
 
 // const useStyles = makeStyles((theme) => ({
 //   form: {
@@ -33,7 +34,8 @@ function SignIn() {
 
   return (
     <React.Fragment>
-      <AppAppBar />
+      {/* <AppAppBar /> */}
+      <NewAppBar />
       <AppForm>
         <React.Fragment>
           <Typography variant="h3" gutterBottom marked="center" align="center">
