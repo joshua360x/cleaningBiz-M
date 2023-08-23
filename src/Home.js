@@ -2,7 +2,7 @@ import withRoot from "./modules/withRoot";
 // --- Post bootstrap -----
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProductCategories from "./modules/views/ProductCategories";
+// import ProductCategories from "./modules/views/ProductCategories";
 import ProductSmokingHero from "./modules/views/ProductSmokingHero";
 import AppFooter from "./modules/views/AppFooter";
 import AppFooterBottom from "./modules/views/AppFooterBottom"
