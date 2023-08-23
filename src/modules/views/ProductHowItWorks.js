@@ -73,7 +73,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>1.</div>
                 <img
-                  src="/productHowItWorks1.svg"
+                  src="/calendar.svg"
                   alt="suitcase"
                   className={classes.image}
                 />
@@ -86,7 +86,7 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}>2.</div>
                 <img
-                  src="/productHowItWorks2.svg"
+                  src="/mail.svg"
                   alt="graph"
                   className={classes.image}
                 />
@@ -127,13 +127,14 @@ function ProductHowItWorks(props) {
               <div className={classes.item}>
                 <div className={classes.number}></div>
                 <img
-                  src="/productHowItWorks3.svg"
+                  src="/phone.svg"
                   alt="clock"
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'Have More Questions, schedule a free consultation call. '}
+                  {`Have More Questions, schedule a `}
                   {''}
+                   <a href='#'>free consultation call.</a>
                 </Typography>
               </div>
             </Grid>

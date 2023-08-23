@@ -4,20 +4,23 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
+import './ProductHowItWorks.css'
+
 
 const styles = (theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: theme.spacing(9),
-    marginBottom: theme.spacing(9),
+    marginTop: theme.spacing(14),
+    marginBottom: theme.spacing(10),
   },
   button: {
     border: '4px solid currentColor',
     borderRadius: 0,
     height: 'auto',
-    padding: theme.spacing(2, 5),
+    padding: theme.spacing(2, 7),
+    margin: '2%',
   },
   link: {
     marginTop: theme.spacing(3),
@@ -33,15 +36,20 @@ function ProductSmokingHero(props) {
 
   return (
     <Container className={classes.root} component="section">
-      <Button className={classes.button}>
+
+      <Typography variant="h6" component="span">
+          Got any questions?
+        </Typography>
+
+      <Button className={`${classes.button} contact`}>
         <Typography variant="h4" component="span">
-          Got any questions? Need help?
+          Contact US
         </Typography>
       </Button>
-      <Typography variant="subtitle1" className={classes.link}>
+      {/* <Typography variant="subtitle1" className={classes.link}>
         We are here to help. Get in touch!
       </Typography>
-      <img src="/producBuoy.svg" className={classes.buoy} alt="buoy" />
+      <img src="/producBuoy.svg" className={classes.buoy} alt="buoy" /> */}
     </Container>
   );
 }
